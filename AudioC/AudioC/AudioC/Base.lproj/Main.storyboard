@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZU-RP-4aO">
+                                <rect key="frame" x="20" y="28" width="560" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.85160195709999997" green="0.85160195709999997" blue="0.85160195709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Play Audio"/>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rtZ-fM-DHz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6a-1w-JdH">
+                                <rect key="frame" x="20" y="66" width="560" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.85160195709999997" green="0.85160195709999997" blue="0.85160195709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Stop Audio"/>
+                                <connections>
+                                    <action selector="stopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IX7-09-QdS"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vLX-Vw-GO9">
+                                <rect key="frame" x="18" y="550" width="564" height="31"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="volumeSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="r6s-yQ-g3Z"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yjo-j4-nie">
+                                <rect key="frame" x="18" y="141" width="564" height="31"/>
+                                <animations/>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.75" maxValue="1.25" translatesAutoresizingMaskIntoConstraints="NO" id="LYP-LH-jxW">
+                                <rect key="frame" x="18" y="495" width="564" height="31"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="rateValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="nIg-5b-kYN"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="D6a-1w-JdH" secondAttribute="leading" id="C2p-l8-kj1"/>
+                            <constraint firstItem="yjo-j4-nie" firstAttribute="top" secondItem="D6a-1w-JdH" secondAttribute="bottom" constant="45" id="EqW-eP-S0d"/>
+                            <constraint firstItem="FZU-RP-4aO" firstAttribute="width" secondItem="D6a-1w-JdH" secondAttribute="width" id="I5y-zr-EYZ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="LYP-LH-jxW" secondAttribute="leading" id="LNr-A3-M5X"/>
+                            <constraint firstItem="FZU-RP-4aO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Px8-XH-8lP"/>
+                            <constraint firstItem="vLX-Vw-GO9" firstAttribute="top" secondItem="LYP-LH-jxW" secondAttribute="bottom" constant="25" id="Rm5-KF-LQt"/>
+                            <constraint firstItem="D6a-1w-JdH" firstAttribute="top" secondItem="FZU-RP-4aO" secondAttribute="bottom" constant="8" id="Ryj-b7-qFu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vLX-Vw-GO9" secondAttribute="trailing" id="ZWS-kl-8ic"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="yjo-j4-nie" secondAttribute="leading" id="f5u-Ox-O74"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LYP-LH-jxW" secondAttribute="trailing" id="isQ-0B-r5r"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="D6a-1w-JdH" secondAttribute="trailing" id="kv6-vP-B9F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yjo-j4-nie" secondAttribute="trailing" id="ov8-Rh-dyy"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="vLX-Vw-GO9" secondAttribute="leading" id="pbd-Zl-vtv"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="FZU-RP-4aO" secondAttribute="leading" id="t6z-FV-pcx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vLX-Vw-GO9" secondAttribute="bottom" constant="20" id="wPW-tf-gQK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FZU-RP-4aO" secondAttribute="trailing" id="wty-wg-2RT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressSlider" destination="yjo-j4-nie" id="2FA-Ao-7as"/>
+                        <outlet property="rateSlider" destination="LYP-LH-jxW" id="imG-pm-jyj"/>
+                        <outlet property="volumeSlider" destination="vLX-Vw-GO9" id="gRv-0V-X4e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="519"/>
+        </scene>
+        <!--Record View Controller-->
+        <scene sceneID="Fcs-7h-9DG">
+            <objects>
+                <viewController id="abA-Oi-jkh" customClass="RecordViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EB8-V0-oKH"/>
+                        <viewControllerLayoutGuide type="bottom" id="kFe-GV-QUZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VTg-LP-VL8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEh-pv-49L">
+                                <rect key="frame" x="20" y="28" width="560" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.78442629419999998" green="0.78442629419999998" blue="0.78442629419999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Record Audio"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgw-Zv-UQP">
+                                <rect key="frame" x="20" y="74" width="560" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.78442629419999998" green="0.78442629419999998" blue="0.78442629419999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Play Audio"/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="vgw-Zv-UQP" secondAttribute="trailing" id="OQW-BH-UR7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kEh-pv-49L" secondAttribute="trailing" id="PMG-qA-aAG"/>
+                            <constraint firstItem="kEh-pv-49L" firstAttribute="top" secondItem="EB8-V0-oKH" secondAttribute="bottom" constant="8" id="QcB-lL-9iA"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="vgw-Zv-UQP" secondAttribute="leading" id="hUD-DU-4CU"/>
+                            <constraint firstItem="vgw-Zv-UQP" firstAttribute="top" secondItem="kEh-pv-49L" secondAttribute="bottom" constant="16" id="maT-IK-bsn"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="kEh-pv-49L" secondAttribute="leading" id="oCA-xI-RSa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5G8-kk-4Mr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953" y="519"/>
+        </scene>
+    </scenes>
+</document>
