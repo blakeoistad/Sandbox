@@ -41,7 +41,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
-    searchdisp
     
     
     //Life Cycle Methods
